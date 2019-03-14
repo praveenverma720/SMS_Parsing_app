@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/singlerow"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recieved"
+            android:textColor="@color/white"
+            android:text="Received"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:background="@color/colorPrimaryDark"
+            android:visibility="visible"
+            android:layout_alignParentLeft="true"
+            />
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rellyt"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/recieved"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/senderId"
+                android:text=""
+                android:textSize="16sp"
+                android:background="@color/white"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/senderCount"
+                android:text=""
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/senderId"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timeDate"
+                android:layout_below="@id/senderId"
+                android:visibility="visible"
+                android:textSize="10sp"
+                android:text=""/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:id="@+id/linlyt"
+                android:layout_below="@id/senderCount"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/messageDetails"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:text=""/>
+
+                <View
+                    android:id="@+id/view_membership_det"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/timeStamp"
+                    android:maxLines="1"
+                    android:text=""/>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/blance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/black"
+        android:text=""/>
+
+
+
+
+</LinearLayout>
